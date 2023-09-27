@@ -11,6 +11,8 @@ This is a simple web application that allows users to check the current weather 
 - Automatically detects and displays weather for the user's current location.
 - User-friendly and responsive design.
 
+```
+
 
 ## Getting Started
 
@@ -19,7 +21,7 @@ To run the Weather App locally, follow these steps:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/weather-app.git
+   git clone https://github.com/banerjee-sarnab/Weather-App-2.git
    ```
 
 2. Navigate to the project directory:
