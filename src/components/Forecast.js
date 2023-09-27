@@ -18,7 +18,7 @@ const Forecast = ({ apiKey, latitude, longitude }) => {
 			}
 
 			const data = await response.json();
-			const dailyData = data.daily.slice(1, 8); // Get the next seven days
+			const dailyData = data.daily.slice(1, 8);
 
 			setDailyForecast(dailyData);
 		} catch (error) {

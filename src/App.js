@@ -3,14 +3,13 @@ import "./App.css";
 import Header from "./components/Header";
 import WeatherDisplay from "./components/WeatherDisplay";
 import WeatherSearch from "./components/WeatherSearch";
-import Forecast from "./components/Forecast"; // Import the Forecast component
+import Forecast from "./components/Forecast";
 
 const App = () => {
 	const [weatherData, setWeatherData] = useState(null);
 	const [dailyForecast, setDailyForecast] = useState([]);
 
 	useEffect(() => {
-		// Initial default city for weather data (you can change this as needed)
 		const defaultCity = "Kolkata";
 
 		fetchWeatherData("90409ffa13314c260023bb438ad695a1", defaultCity);
@@ -29,7 +28,6 @@ const App = () => {
 			const data = await response.json();
 			setWeatherData(data);
 
-			// Fetch seven-day forecast data
 			fetchSevenDayForecast(apiKey, data.coord.lat, data.coord.lon);
 		} catch (error) {
 			console.error("Error fetching weather data:", error);
@@ -47,7 +45,7 @@ const App = () => {
 			}
 
 			const data = await response.json();
-			const dailyData = data.daily.slice(1, 8); // Get the next seven days
+			const dailyData = data.daily.slice(1, 8);
 
 			setDailyForecast(dailyData);
 		} catch (error) {

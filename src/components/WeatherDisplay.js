@@ -2,7 +2,7 @@ import React from "react";
 
 const WeatherDisplay = ({ weatherData }) => {
 	if (!weatherData) {
-		return <div>Loading...</div>; // You can display a loading message or loading spinner here
+		return <div>Loading...</div>;
 	}
 
 	const { name } = weatherData;
